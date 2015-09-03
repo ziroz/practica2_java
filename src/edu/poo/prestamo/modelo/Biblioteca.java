@@ -19,7 +19,9 @@ public class Biblioteca {
      *
      * @return float, multa total del materias retrasado de la biblioteca
      */
-   
+   public float calcularTotalMulta(){
+       return 0;
+   }
 
     //
     public void anadirMaterial(IMaterial material) {
