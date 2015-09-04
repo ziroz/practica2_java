@@ -17,19 +17,9 @@ public class CD extends Material{
     public String darDetalle() {
          String detalle = "NOMBRE:" + "\t" + darNombre() + "\n"
                 + "CODIGO:" + "\t" + darCodigo() + "\n"
-                + "CRITICO:" + "\t" + (darCritico() ? "CRITICO" : "NORMAL" + "\n"
+                + "CRITICO:" + "\t" + (critico ? "CRITICO" : "NORMAL" + "\n"
                         + "MEGABYTES:" + "\t" + megabytes);
         return detalle;
-    }
-
-    @Override
-    public void setDisponible(boolean disponible) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean darDisponible() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     /**
@@ -39,7 +29,6 @@ public class CD extends Material{
      *
      * @return float, valor de la multa por d�a de retraso
      */
-    
     
     @Override
     public float calcularMultaXDia() {

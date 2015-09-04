@@ -41,24 +41,9 @@ public class Revista extends Material {
     public String darDetalle() {
         String detalle = "NOMBRE:" + "\t" + darNombre() + "\n"
                 + "CODIGO:" + "\t" + darCodigo() + "\n"
-                + "MATERIAL:" + "\t" + (darCritico() ? "CRITICO" : "NORMAL" + "\n"
+                + "MATERIAL:" + "\t" + (super.critico ? "CRITICO" : "NORMAL" + "\n"
                         + "CATEROGIA:" + "\t" + categoria);
         return detalle;
-    }
-
-    @Override
-    public void generarCodigo() {
-        super.generarCodigo();
-    }
-
-    @Override
-    public void setDisponible(boolean disponible) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean darDisponible() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

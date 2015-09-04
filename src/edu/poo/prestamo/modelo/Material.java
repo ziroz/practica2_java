@@ -6,7 +6,7 @@ public abstract class Material implements IMaterial{
 
     private String codigo;
     private String nombre;
-    private boolean critico;
+    protected boolean critico;
     private boolean disponible;
     
     public Material(String nombre, boolean critico) {
@@ -26,16 +26,13 @@ public abstract class Material implements IMaterial{
         return this.codigo;
     }
     
-    public boolean darCritico(){
-        return this.critico;
+    public void setDisponible(boolean disponible){
+    this.disponible = disponible;
     }
+
     
-    public boolean setDisponible(){
+    public boolean darDisponible(){
         return this.disponible;
-    }
-    
-    public void darDisponible(boolean disponible){
-        this.disponible = disponible;
     }
     /**
      * Metodo que genera el c�digo �nico que identifica el material dentro de la

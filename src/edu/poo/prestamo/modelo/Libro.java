@@ -18,36 +18,19 @@ public class Libro extends Material {
      * @return float, valor de la multa por d�a de retraso
      */
     
-    
+    @Override
+    public float calcularMultaXDia() {
+        double valorMulta = critico ? VALOR_MULTA : (float)VALOR_MULTA*1.25;
+        
+        return (float)(numeroPaginas / 100 * valorMulta);
+    }
     //
     @Override
     public String darDetalle() {
         String detalle = "NOMBRE:" + "\t" + darNombre() + "\n"
                 + "CODIGO:" + "\t" + darCodigo() + "\n"
-                + "MATERIAL:" + "\t" + (darCritico() ? "CRITICO" : "NORMAL" + "\n"
+                + "MATERIAL:" + "\t" + (critico ? "CRITICO" : "NORMAL" + "\n"
                         + "No. Paginas:" + "\t" + numeroPaginas);
         return detalle;
-    }
-
-    @Override
-    public void generarCodigo() {
-        super.generarCodigo();
-    }
-
-    @Override
-    public float calcularMultaXDia() {
-        double valorMulta = darCritico() ? VALOR_MULTA : (float)VALOR_MULTA*1.25;
-        
-        return (float)(numeroPaginas / 100 * valorMulta);
-    }
-
-    @Override
-    public void setDisponible(boolean disponible) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean darDisponible() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
