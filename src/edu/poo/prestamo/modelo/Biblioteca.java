@@ -20,7 +20,11 @@ public class Biblioteca {
      * @return float, multa total del materias retrasado de la biblioteca
      */
    public float calcularTotalMulta(){
-       return 0;
+       float  total = 0;
+       for(Prestamo prestamo : listaPrestamos){
+          total+= prestamo.calcularMulta();
+       }
+       return total;
    }
 
     //
